@@ -56,7 +56,7 @@ router.delete('/tasks/:id', wrap(async (req, res) => {
   }
 }));
 
-app.use('/api', router);
+app.use(['/api', '/.netlify/functions/api'],router);
 
 app.use((err, req, res, next) => {
   console.error(err);

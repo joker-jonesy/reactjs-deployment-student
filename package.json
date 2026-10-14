@@ -8,11 +8,13 @@
     "dev:client": "npm run dev --prefix client",
     "db:push": "prisma db push",
     "db:seed": "node --env-file=.env prisma/seed.js",
-    "postinstall": "prisma generate && npm install --prefix client"
+    "postinstall": "prisma generate && npm install --prefix client",
+    "build": "prisma generate && npm install --prefix client && npm run build --prefix client"
   },
   "dependencies": {
     "@prisma/client": "^6.0.0",
-    "express": "^4.21.0"
+    "express": "^4.21.0",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^9.0.0",

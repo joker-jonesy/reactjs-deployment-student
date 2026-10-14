@@ -14,7 +14,7 @@ async function request(path, options = {}) {
 
 // TODO: fetch the list of tasks from GET /api/tasks and return it.
 // The functions below show the pattern.
-export const getTasks = () => Promise.resolve([]);
+export const getTasks = () => request("/tasks");
 
 export const createTask = (data) => request('/tasks', { method: 'POST', body: JSON.stringify(data) });
 export const updateTask = (id, data) => request(`/tasks/${id}`, { method: 'PUT', body: JSON.stringify(data) });
